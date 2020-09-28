@@ -1,0 +1,30 @@
+{
+  "name": "MERN-UserList",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"yarn run server\" \"yarn run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thedumbappdev/MERN-UserList.git"
+  },
+  "author": "Dip Kumar Kapat <kapat.dip@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^5.3.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.7",
+    "nodemon": "^2.0.4"
+  },
+  "bugs": {
+    "url": "https://github.com/thedumbappdev/MERN-UserList/issues"
+  },
+  "homepage": "https://github.com/thedumbappdev/MERN-UserList#readme",
+  "devDependencies": {},
+  "keywords": []
+}
