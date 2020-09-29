@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./App.css";
-import { DollarSign, Percent, Edit } from "react-feather";
-import { ToastProvider, useToasts } from "react-toast-notifications";
+// import { DollarSign, Percent, Edit } from "react-feather";
+// import { ToastProvider, useToasts } from "react-toast-notifications";
 import Nav from "./components/Nav";
 import Home from "./components/Home";
 import Register from "./components/Register";
