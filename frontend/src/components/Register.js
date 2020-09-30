@@ -26,8 +26,13 @@ const Register = () => {
     const response = await axios.post("/api/register", body, {
       headers: {
         "Content-Type": "application/json",
-      }
-    })
+      },
+    });
+
+    setUserDetails({
+      ...userDetails,
+      message: response.data.message,
+    });
 
     console.log(response);
   };
@@ -39,7 +44,7 @@ const Register = () => {
           <h1 className="text-xl text-gray-800 text-center uppercase font-normal mb-6">
             Register User
           </h1>
-          <form className="w-full max-w-sm" onSubmit={register}>
+          <form className="w-full" onSubmit={register}>
             <div className="md:flex md:items-center mb-6">
               <div className="md:w-1/4">
                 <label
@@ -89,10 +94,19 @@ const Register = () => {
                   className="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
                   type="submit"
                 >
-                  Sign Up
+                  Register
                 </button>
               </div>
             </div>
+
+            {userDetails.message ? (
+              <div
+                className="flex items-center bg-purple-800 justify-center text-white text-sm px-4 py-3 mt-3 rounded"
+                role="alert"
+              >
+                <p>{userDetails.message}</p>
+              </div>
+            ) : null}
           </form>
         </div>
       </div>
